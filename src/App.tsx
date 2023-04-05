@@ -4,32 +4,35 @@ import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 
 
-function hello() {
-  debugger
-  alert("Hello")
-}
 
-//hello();
 function App() {
-  console.log("App rendering")
-  return (
-      <div className="App">
+    console.log("App rendering")
+    return (
+        <div>
+            {/* <PageTitle title={"This is App component"}/>
+            <PageTitle title={"My friends"}/>
+            Article 1
+            <Rating value={3}/>*/}
+            <Accordion titleValue={"Menu"} collapsed={true}/>
+            <Accordion titleValue={"Users"} collapsed={false}/>
+         <Rating value={0}/>
+            <Rating value={1}/>
+            <Rating value={2}/>
+            <Rating value={3}/>
+            <Rating value={4}/>
+            <Rating value={5}/>
 
-        <input/>
-        <input value={"yo"} type={"password"}/>
-        <AppTitle/>
-        <Rating/>
-        <Accordion/>
-        <Rating/>
-      </div>
-  );
+        </div>
+    );
 }
-
-function AppTitle() {
-  console.log("AppTitle rendered")
-  return <>"This is App component"</>
+type PageTitlePropsType ={
+    title:string
 }
+function PageTitle(props: PageTitlePropsType) {
 
+    console.log("PageTitle rendered")
+    return <h1>{props.title}</h1>
+}
 
 
 export default App;
