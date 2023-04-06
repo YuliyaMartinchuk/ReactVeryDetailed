@@ -1,0 +1,39 @@
+.container {
+    margin: 10px;
+    display: flex;
+
+}
+
+.switch {
+    width: 70px;
+    height: 30px;
+    border: black solid 2px;
+    text-align: center;
+    background-color: white;
+    margin-left: 10px;
+}
+
+.switchOn {
+    background-color: green;
+}
+
+.switchOff {
+    background-color: red;
+}
+
+.circle{
+    margin-left: 5px;
+    border: black solid 2px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.circleOn {
+
+    background-color: green;
+
+}
+.circleOff{
+    background-color: red;
+}
