@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import './App.css';
 import {Accordion} from "./components/Accordion/Accordion";
 import {Rating, RatingValueType} from "./components/Rating/Rating";
-import {MyOnOff} from "./components/MyOnOff/MyOnOff";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
@@ -11,12 +10,31 @@ import {UncontrolledInput} from "./components/UncontrolledInput/UncontrolledInpu
 import {
     UncontrolledInputByButtonPress
 } from "./components/UncontrolledInputByButtonPress/UncontrolledInputByButtonPress";
+import Input from "./components/Input/Input";
+import Checkbox from "./components/Checkbox/Checkbox";
+import Select from "./components/Select/Select";
 
 
 function App() {
     const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     const [switchOn, setSwitchOn] = useState<boolean>(false)
+    const [inputValue, setInputValue]=useState("")
+    const [checkboxValue, setCheckboxValue]=useState(true)
+    const [selectValue, setSelectValue]=useState<string|undefined>("2")
+
+    const onChangeInput = (e:ChangeEvent<HTMLInputElement>) => {
+        setInputValue(e.currentTarget.value)
+    }
+    const onChangeCheckbox = (e:ChangeEvent<HTMLInputElement>) => {
+        setCheckboxValue(e.currentTarget.checked)
+    }
+
+    const onChangeSelect = (e:ChangeEvent<HTMLSelectElement>) => {
+        setSelectValue(e.currentTarget.value)
+    }
+
+
     console.log("App rendering")
     return (
         <div>
@@ -36,6 +54,16 @@ function App() {
             <UncontrolledRating />
             <UncontrolledInput />
             <UncontrolledInputByButtonPress />
+            <Input onChange={onChangeInput}
+                   inputValue={inputValue}
+            />
+            <Checkbox onChange={onChangeCheckbox}
+                      checked={checkboxValue}
+            />
+            <Select onChange={onChangeSelect}
+                    selectValue={selectValue}
+            />
+
         </div>
     );
 }
