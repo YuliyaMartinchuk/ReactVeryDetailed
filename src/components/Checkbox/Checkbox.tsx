@@ -1,16 +1,18 @@
 import React, {ChangeEvent} from 'react';
 type PropsType = {
-    onChange:(e:ChangeEvent<HTMLInputElement>) => void
     checked: boolean
+    onChange:(checked: boolean) => void
 
 }
 
 const Checkbox = (props:PropsType) => {
 
-
+    const onChangeCheckbox = (e:ChangeEvent<HTMLInputElement>) => {
+        props.onChange(e.currentTarget.checked)
+    }
     return (
         <div>
-            <input type={"checkbox"} checked={props.checked} onChange={props.onChange}/>
+            <input type={"checkbox"} checked={props.checked} onChange={onChangeCheckbox}/>
         </div>
     );
 };

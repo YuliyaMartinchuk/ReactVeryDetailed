@@ -1,14 +1,18 @@
 import React, {ChangeEvent} from 'react';
 type PropsType ={
-    onChange: (e:ChangeEvent<HTMLInputElement>)=>void
     inputValue: string
+    onChange: (inputValue: string)=>void
+
 }
 
 const Input = (props:PropsType) => {
+    const onChangeInput = (e:ChangeEvent<HTMLInputElement>) => {
+        props.onChange(e.currentTarget.value)
+    }
 
     return (
         <div>
-            <input value={props.inputValue} onChange={props.onChange}/>
+            <input value={props.inputValue} onChange={onChangeInput}/>
         </div>
     );
 };

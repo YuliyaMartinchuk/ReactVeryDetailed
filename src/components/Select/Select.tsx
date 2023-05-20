@@ -1,17 +1,19 @@
 import React, {ChangeEvent} from 'react';
 
 type PropsType = {
-    onChange:(e:ChangeEvent<HTMLSelectElement>) => void
     selectValue: string|undefined
+    onChange:( selectValue: string|undefined) => void
 
 }
 
 const Select = (props:PropsType) => {
-
+    const onChangeSelect = (e:ChangeEvent<HTMLSelectElement>) => {
+        props.onChange(e.currentTarget.value)
+    }
 
     return (
         <div>
-            <select value={props.selectValue} onChange={props.onChange}>
+            <select value={props.selectValue} onChange={onChangeSelect}>
                 <option >none</option>
                 <option value={"1"}>Minsk</option>
                 <option value={"2"}>Moscow</option>

@@ -23,18 +23,6 @@ function App() {
     const [checkboxValue, setCheckboxValue]=useState(true)
     const [selectValue, setSelectValue]=useState<string|undefined>("2")
 
-    const onChangeInput = (e:ChangeEvent<HTMLInputElement>) => {
-        setInputValue(e.currentTarget.value)
-    }
-    const onChangeCheckbox = (e:ChangeEvent<HTMLInputElement>) => {
-        setCheckboxValue(e.currentTarget.checked)
-    }
-
-    const onChangeSelect = (e:ChangeEvent<HTMLSelectElement>) => {
-        setSelectValue(e.currentTarget.value)
-    }
-
-
     console.log("App rendering")
     return (
         <div>
@@ -54,13 +42,13 @@ function App() {
             <UncontrolledRating />
             <UncontrolledInput />
             <UncontrolledInputByButtonPress />
-            <Input onChange={onChangeInput}
-                   inputValue={inputValue}
+            <Input  inputValue={inputValue}
+                    onChange={setInputValue}
             />
-            <Checkbox onChange={onChangeCheckbox}
+            <Checkbox onChange={setCheckboxValue}
                       checked={checkboxValue}
             />
-            <Select onChange={onChangeSelect}
+            <Select onChange={setSelectValue}
                     selectValue={selectValue}
             />
 
