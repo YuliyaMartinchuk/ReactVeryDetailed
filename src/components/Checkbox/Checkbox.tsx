@@ -11,7 +11,7 @@ const Checkbox = (props:PropsType) => {
         props.onChange(e.currentTarget.checked)
     }
     return (
-        <div>
+        <div style={{margin: "10px"}}>
             <input type={"checkbox"} checked={props.checked} onChange={onChangeCheckbox}/>
         </div>
     );

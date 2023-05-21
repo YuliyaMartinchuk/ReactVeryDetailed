@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React,  from "react";
 
 type PropsType = {
     on:boolean
@@ -40,7 +40,7 @@ export const OnOff = (props:PropsType)=>{
         backgroundColor: props.on ? "green": "red"
     }
 
-    return <div>
+    return <div style={{margin: "10px"}}>
 
         <div style={onStyle} onClick={()=>{props.onChange(true)}}>On</div>
         <div style={offStyle} onClick={()=>{props.onChange(false)}}>Off</div>

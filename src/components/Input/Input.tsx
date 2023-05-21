@@ -11,7 +11,7 @@ const Input = (props:PropsType) => {
     }
 
     return (
-        <div>
+        <div style={{margin: "10px"}}>
             <input value={props.inputValue} onChange={onChangeInput}/>
         </div>
     );
