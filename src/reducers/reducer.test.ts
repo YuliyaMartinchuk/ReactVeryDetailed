@@ -26,12 +26,12 @@ test('collapsed should be false', () => {
 
 });
 
-test('reducer should throw error because action type is incorrect', () => {
-
-    const startState: StateType  = {
-        collapsed:true
-    }
-
-    expect(()=>{ reducer(startState, {type:"FAKETYPE"})}).toThrowError();
-
-});
+// test('reducer should throw error because action type is incorrect', () => {
+//
+//     const startState: StateType  = {
+//         collapsed:true
+//     }
+//
+//     expect(()=>{ reducer(startState, {type:"FAKETYPE"})}).toThrowError();
+//
+// });

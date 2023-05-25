@@ -6,6 +6,7 @@ import {OnOff} from "./components/OnOff/OnOff";
 import Input from "./components/Input/Input";
 import Checkbox from "./components/Checkbox/Checkbox";
 import Select, {SelectItemsType} from "./components/Select/Select";
+import {Example1} from "./components/ReactMemo/ReactMemo";
 
 
 
@@ -61,6 +62,8 @@ function App() {
             <Select onChange={setSelectValue}
                     selectValue={null}
                     items={selectItems} />
+
+            <Example1/>
 
             {/*{Uncontrolled components}*/}
 
