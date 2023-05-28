@@ -7,6 +7,8 @@ import Input from "./components/Input/Input";
 import Checkbox from "./components/Checkbox/Checkbox";
 import Select, {SelectItemsType} from "./components/Select/Select";
 import {Example1} from "./components/ReactMemo/ReactMemo";
+import {DifficultCountingExample} from "./components/UseMemo/DifficultCountingExample";
+import {HelpsForReactMemo} from "./components/UseMemo/HelpsForReactMemo";
 
 
 
@@ -64,6 +66,8 @@ function App() {
                     items={selectItems} />
 
             <Example1/>
+            <DifficultCountingExample />
+            <HelpsForReactMemo />
 
             {/*{Uncontrolled components}*/}
 
