@@ -9,6 +9,7 @@ import Select, {SelectItemsType} from "./components/Select/Select";
 import {Example1} from "./components/ReactMemo/ReactMemo";
 import {DifficultCountingExample} from "./components/UseMemo/DifficultCountingExample";
 import {HelpsForReactMemo} from "./components/UseMemo/HelpsForReactMemo";
+import {LikeUseCallback} from "./components/UseMemo/LikeUseCallback";
 
 
 
@@ -68,6 +69,7 @@ function App() {
             <Example1/>
             <DifficultCountingExample />
             <HelpsForReactMemo />
+            <LikeUseCallback />
 
             {/*{Uncontrolled components}*/}
 
