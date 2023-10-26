@@ -3,19 +3,29 @@ import React from "react"
 import {Clock} from "./Clock"
 
 
-const BaseExample = () => {
-    return <>
-       <Clock/>
-    </>
-}
 const meta: Meta<typeof Clock> = {
     title: 'Clock',
     component: Clock,
-};
+}
+
+export const BaseAnalogExample = () => {
+    return <>
+        <Clock mode={"analog"}/>
+    </>
+}
+const BaseDigitalExample = () => {
+    return <>
+        <Clock mode={"digital"}/>
+    </>
+}
 
 
-export default meta;
-type Story = StoryObj<typeof Clock>
+export default meta
 
-export const SimpleExample1: Story = {}
+type AnalogStory = StoryObj<typeof BaseAnalogExample>
+export const AnalogClock: AnalogStory = {}
+
+
+type DigitalStory = StoryObj<typeof BaseDigitalExample>
+export const DigitalClock: DigitalStory = {}
 
