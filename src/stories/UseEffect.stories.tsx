@@ -28,6 +28,8 @@ const SimpleExample = () => {
     </>
 }
 
+
+
 const meta: Meta<typeof SimpleExample> = {
     title: 'useEffect demo',
     component: SimpleExample,
